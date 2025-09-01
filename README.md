@@ -10,8 +10,6 @@
 | **IP**                    | 10.10.10.100 |
 | **Dificultad**            | Easy         |
 | **Sistema Operativo**     | Windows      |
-| **Método de Explotación** |              |
-
 ---
 
 ## **1️ - Escaneo y Enumeración**
@@ -139,12 +137,6 @@ smbclient //10.10.10.100/C$ -U Administrator
 ```
 
 <img width="1131" height="769" alt="Pasted image 20250604195859" src="https://github.com/user-attachments/assets/f592d287-f8ae-4866-9474-d69f69269006" />
-
----
-
-## **3️ - Escalada de Privilegios**
-
-
 
 ---
 
