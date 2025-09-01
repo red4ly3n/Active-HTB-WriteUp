@@ -1,8 +1,5 @@
 # Active-HTB-WriteUp
 
-# **Máquina: [Active]**
-
-
 ## **Información General**
 
 | Machine Info              |              |
